@@ -22,6 +22,7 @@ from rest_framework.pagination import LimitOffsetPagination
 class PostPagination(LimitOffsetPagination):
     default_limit = 10
 
+
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
