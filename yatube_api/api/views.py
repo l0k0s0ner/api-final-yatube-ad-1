@@ -29,6 +29,8 @@ class PostViewSet(viewsets.ModelViewSet):
         IsAuthorOrReadOnly,
     )
 
+    pagination_class = PostPagination
+
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
